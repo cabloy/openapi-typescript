@@ -402,7 +402,7 @@ function transformSchemaObjectCore(schemaObject: SchemaObject, options: Transfor
       } else {
         for (const t of schemaObject.type) {
           if (t === "null" || t === null) {
-            uniqueTypes.push(NULL);
+            uniqueTypes.push(UNDEFINED);
           } else {
             uniqueTypes.push(transformSchemaObject({ ...schemaObject, type: t } as SchemaObject, options));
           }

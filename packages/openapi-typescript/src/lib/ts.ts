@@ -482,7 +482,7 @@ export function tsModifiers(modifiers: { readonly?: boolean; export?: boolean })
 
 /** Create a T | null union */
 export function tsNullable(types: ts.TypeNode[]): ts.TypeNode {
-  return ts.factory.createUnionTypeNode([...types, NULL]);
+  return ts.factory.createUnionTypeNode([...types, UNDEFINED]);
 }
 
 /** Create a TS Omit<X, Y> type */
